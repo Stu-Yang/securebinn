@@ -23,7 +23,15 @@ a trusted third party. The data owner seperate the data to other participants, a
 
 ## How to run this project ?
 
-First fill in the relevant settings in `role/config.json` according to the actual situation, including the `ips` and the `ports` of three participants. Then, run
+First fill in the relevant settings in `role/config.json` according to the actual situation, including the `ips` and the `ports` of three participants. 
+
+```shell
+# /root/workplace/securebinn/role/config.json
+update line 17: "model_path": "models/Network-A.h5"
+update line 24: "archive_path":"archives/"
+```
+
+Then, run
 
 ```shell
 root@name:~/workplace/securebinn# conda activate securebinn
@@ -32,11 +40,11 @@ root@name:~/workplace/securebinn# conda activate securebinn
 
 to generate three files representing three different participants. For each participant, execute
 
-```
+```shell
 >>> split into 3 terminals
-(securebinn) root@yangpeng:~/yp_workplace/securebinn/role_0_data_owner# python main.py
-(securebinn) root@yangpeng:~/yp_workplace/securebinn/role_1_model_owner# python main.py
-(securebinn) root@yangpeng:~/yp_workplace/securebinn/role_2_ttp# python main.py
+(securebinn) root@name:~/workplace/securebinn/role_0_data_owner# python main.py
+(securebinn) root@name:~/workplace/securebinn/role_1_model_owner# python main.py
+(securebinn) root@name:~/workplace/securebinn/role_2_ttp# python main.py
 ```
 
 to run the SecureBiNN.
