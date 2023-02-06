@@ -12,7 +12,7 @@
         10010,
         10000
     ],
-    "model_path": "models\\Network-A.h5",
+    "model_path": "models/Network-A.h5",
     "precision": 5,
     "float_coded_dtype": "int16",
     "batch_size": 1,

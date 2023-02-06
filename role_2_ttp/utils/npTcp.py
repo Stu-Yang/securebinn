@@ -51,11 +51,11 @@ class npTcpReceiver:
             bufsize = self.default_bufsize
 
         # confirm the length
-        msg_len = int('0' + self.skt_accepted.recv(
+        msg_len = int(self.skt_accepted.recv(
             bufsize).decode(self._code_method))
         self.skt_accepted.send(str(msg_len).encode())
         # print(msg_len)
-        
+
         # receive the bytes
         chunk = b''
         rcv_len = 0
