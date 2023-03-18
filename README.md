@@ -49,3 +49,78 @@ to generate three files representing three different participants. For each part
 
 to run the SecureBiNN.
 The report message will be returned to data owner.
+
+There are a example message below:
+
+```shell
+# (securebinn) root@yangpeng:~/yp_workplace/securebinn/role_0_data_owner# python main.py
+ecurebinn/role_0_data_owner# python main.py
+Connect to 127.0.0.1:45002 successfully.
+Connect to 127.0.0.1:45004 successfully.
+Seperate model
+Seperate data
+Dataset mnist loaded.
+60000 training samples, 10000 testing samples.
+The shape of the answer: (1, 10)
+Evaluate begin:
+Iter 0 begin.
+Iter 1 begin.
+Iter 2 begin.
+Iter 3 begin.
+Iter 4 begin.
+Iter 5 begin.
+Iter 6 begin.
+Iter 7 begin.
+Iter 8 begin.
+Iter 9 begin.
+N_iter: 10
+Accuracy: 100.0000 %
+Total:
+Time: 0.281s, Comm: 0.051MB
+Per iteration:
+Time: 0.028s, Comm: 0.005MB
+Per input:
+Time: 0.028s, Comm: 0.005MB
+```
+
+```shell
+# (securebinn) root@yangpeng:~/yp_workplace/securebinn/role_1_model_owner# python main.py
+Connect to 127.0.0.1:45000 successfully.
+Connect to 127.0.0.1:45005 successfully.
+Seperate model
+0: dense_1 coding with 16 bits.
+1: batch_normalization_17 coding with 16 bits.
+2: activation_18 coding with 16 bits.
+3: dense_2 coding with 16 bits.
+Seperate data
+Evaluate begin:
+Iter 0 begin.
+Iter 1 begin.
+Iter 2 begin.
+Iter 3 begin.
+Iter 4 begin.
+Iter 5 begin.
+Iter 6 begin.
+Iter 7 begin.
+Iter 8 begin.
+Iter 9 begin.
+```
+
+```shell
+# (securebinn) root@yangpeng:~/yp_workplace/securebinn/role_2_ttp# python main.py
+Connect to 127.0.0.1:45003 successfully.
+Connect to 127.0.0.1:45001 successfully.
+Seperate model
+Seperate data
+Evaluate begin:
+Iter 0 begin.
+Iter 1 begin.
+Iter 2 begin.
+Iter 3 begin.
+Iter 4 begin.
+Iter 5 begin.
+Iter 6 begin.
+Iter 7 begin.
+Iter 8 begin.
+Iter 9 begin.
+```
