@@ -151,6 +151,8 @@ Trainable params: 102,026
 Non-trainable params: 256
 _________________________________________________________________
 None
+model size is  0.1950874329 MB.      # total numbers of params is 102,282
+                                     # 102,282 bits = 0.01219296MB，is 16X
 0: dense_1 coding with 16 bits.
 1: batch_normalization_17 coding with 16 bits.
 2: activation_18 coding with 16 bits.
