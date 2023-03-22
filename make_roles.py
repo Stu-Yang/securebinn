@@ -6,11 +6,11 @@ from pathlib import Path
 
 config = None
 
-with open('role/config.json', 'r') as f:
+with open('role/config.json', 'r') as f:    # 打开`role/config.json`文件，其中有三个角色的ip和port，以及模型路径、数据集、精度、浮点编码类型、批量大小等
     config = json.load(f)
 
 
-for i in range(3):
+for i in range(3):      # 依次生成名为`i=0`、`i=1`、`i=2`的角色，其中`i=0`表示data_owner、`i=1`表示model_owner、`i=0`表示ttp（trust thrid party）
     name = None
     if i == 0:
         name = 'data_owner'
@@ -26,7 +26,7 @@ for i in range(3):
         shutil.rmtree(new_dir_path)
 
     # copy the file
-    shutil.copytree('role', new_dir_path)
+    shutil.copytree('role', new_dir_path)       # 复制文件夹shutil.copytree(old_path,new_path)，old_path是要复制的文件夹路径，new_path是要粘贴的文件夹路径
     cur_config = config.copy()
 
     # modify
